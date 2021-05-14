@@ -9,16 +9,18 @@ $cell.find(".js-expander").click(function () {
 
   if ($thisCell.hasClass("is-collapsed")) {
     $cell.not($thisCell).removeClass("is-expanded").addClass("is-collapsed");
-    //   .addClass("is-inactive");
+
     $thisCell.removeClass("is-collapsed").addClass("is-expanded");
     if ($(window).width() <= deviceWidthThreshold) {
-      gridStatusStock =
-        document.getElementsByClassName("grid-container")[0].style
-          .gridTemplateColumns;
+      console.log($(this).parent().parent());
+      gridStatusStock = $(this).parent().parent().css("grid-template-columns");
+      // document.getElementsByClassName("grid-container")[0].style
+      //   .gridTemplateColumns;
 
-      document.getElementsByClassName(
-        "grid-container"
-      )[0].style.gridTemplateColumns = "100%";
+      //   document.getElementsByClassName(
+      //     "grid-container"
+      //   )[0].style.gridTemplateColumns = "100%";
+      $(this).parent().parent().css("grid-template-columns", "100%");
     }
 
     if ($cell.not($thisCell).hasClass("is-inactive")) {
@@ -30,13 +32,15 @@ $cell.find(".js-expander").click(function () {
     $thisCell.removeClass("is-expanded").addClass("is-collapsed");
     $cell.not($thisCell).removeClass("is-inactive");
     if ($(window).width() <= deviceWidthThreshold) {
-      document.getElementsByClassName(
-        "grid-container"
-      )[0].style.gridTemplateColumns = "50% 50%";
+      //   document.getElementsByClassName(
+      //     "grid-container"
+      //   )[0].style.gridTemplateColumns = "50% 50%";
+      $(this).parent().parent().css("grid-template-columns", "50% 50%");
     } else {
-      document.getElementsByClassName(
-        "grid-container"
-      )[0].style.gridTemplateColumns = "auto auto auto";
+      //   document.getElementsByClassName(
+      //     "grid-container"
+      //   )[0].style.gridTemplateColumns = "auto auto auto";
+      $(this).parent().parent().css("grid-template-columns", "auto auto auto");
     }
   }
 });
@@ -48,12 +52,14 @@ $cell.find(".js-collapser").click(function () {
   $thisCell.removeClass("is-expanded").addClass("is-collapsed");
   $cell.not($thisCell).removeClass("is-inactive");
   if ($(window).width() <= deviceWidthThreshold) {
-    document.getElementsByClassName(
-      "grid-container"
-    )[0].style.gridTemplateColumns = "50% 50%";
+    // document.getElementsByClassName(
+    //   "grid-container"
+    // )[0].style.gridTemplateColumns = "50% 50%";
+    $(this).parent().parent().css("grid-template-columns", "50% 50%");
   } else {
-    document.getElementsByClassName(
-      "grid-container"
-    )[0].style.gridTemplateColumns = "auto auto auto";
+    // document.getElementsByClassName(
+    //   "grid-container"
+    // )[0].style.gridTemplateColumns = "auto auto auto";
+    $(this).parent().parent().css("grid-template-columns", "auto auto auto");
   }
 });
