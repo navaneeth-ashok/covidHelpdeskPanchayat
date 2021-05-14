@@ -14,6 +14,8 @@ html {
 body {
   font: normal 1em/1.2 "Rubik", sans-serif;
   margin: 0 auto;
+  background-color: #222225;
+  color: rgb(177, 174, 174);
 }
 
 span:lang(ml) {
@@ -28,11 +30,12 @@ h1,
 h2,
 h3 {
   font-family: "Rubik", sans-serif;
+  color: #2a9d8f;
 }
 
 a {
   text-decoration: none;
-  color: rgb(71, 71, 71);
+  color: rgb(218, 218, 218);
   font-weight: bold;
 }
 
@@ -71,7 +74,7 @@ h2 {
 }
 
 #header {
-  background-color: rgb(247, 245, 245);
+  background-color: #002335;
 }
 
 #site-name img {
@@ -79,7 +82,7 @@ h2 {
 }
 
 #site-name a {
-  color: #000000;
+  color: #50ffe7;
   font-size: 1em;
 }
 
@@ -125,12 +128,16 @@ ul.menu {
 }
 
 .menu a {
-  color: #5e5e5e;
+  color: #db3a34;
   font-weight: 500;
 }
 
 .menu a:hover {
-  color: #252525;
+  color: #f7453e;
+}
+
+.info {
+  color: #e9c46a;
 }
 
 ul.menu.lang {
@@ -179,7 +186,7 @@ ul.menu.lang {
 }
 
 .grid-item {
-  background-color: rgba(235, 235, 235, 0.8);
+  background-color: rgb(23 95 2 / 20%);
   border: none;
   padding: 10px;
   font-size: 1.2em;
@@ -187,11 +194,15 @@ ul.menu.lang {
   margin-top: 5px;
   margin-bottom: 10px;
   border-radius: 5px;
-  border: 1px solid rgb(211, 211, 211);
-  box-shadow: 0px 5px 10px rgb(190, 190, 190);
-  color: #414141;
+  border: none;
+  /* border: 1px solid rgb(211, 211, 211); */
+  box-shadow: 0px 5px 5px rgb(78 149 163 / 42%);
+  color: rgb(177, 174, 174);
 }
 
+.grid-item h4 {
+  color: rgb(218, 218, 218);
+}
 .card:hover .card__inner {
   transform: scale(1.05);
 }
@@ -316,7 +327,7 @@ h4 {
 }
 
 #footer {
-  background-color: rgb(223, 223, 223);
+  background-color: #323031;
 }
 
 @media screen and (max-width: 480px) {
