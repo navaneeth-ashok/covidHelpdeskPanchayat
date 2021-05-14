@@ -69,3 +69,41 @@ $(function () {
     $("#" + $(this).val()).show();
   });
 });
+
+var navpos = $(".menu").offset();
+console.log(navpos.top);
+$(window).bind("scroll", function () {
+  if ($(window).scrollTop() > navpos.top) {
+    $("#header").addClass("menu-fixed");
+    $("#site-name").hide();
+    if ($(window).width() <= deviceWidthThreshold) {
+      $(".menu").hide();
+      $(".menu-btn").show();
+    }
+  } else {
+    $("#header").removeClass("menu-fixed");
+    $("#site-name").show();
+    if ($(window).width() <= deviceWidthThreshold) {
+      $(".menu").show();
+      $(".menu-btn").hide();
+    }
+  }
+});
+window.addEventListener("hashchange", function () {
+  scrollBy(0, -100);
+});
+
+$("#menu-btn-id").click(function () {
+  $("#menu-btn-id").toggleClass("menu-btn-open");
+  $(".menu").toggle();
+  $("ul.menu").css("padding-top", "50px");
+  $(".menu").addClass("menu-block li");
+});
+
+$(".nav-cls").click(function () {
+  if ($(".menu-btn").css("display") == "inline-block") {
+    //            console.log("Clicked inside burger menu");
+    $(".menu").toggle();
+    $("#menu-btn-id").toggleClass("menu-btn-open");
+  }
+});
