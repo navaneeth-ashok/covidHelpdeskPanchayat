@@ -18,7 +18,7 @@ $cell.find(".js-expander").click(function () {
 
       document.getElementsByClassName(
         "grid-container"
-      )[0].style.gridTemplateColumns = "auto";
+      )[0].style.gridTemplateColumns = "100%";
     }
 
     if ($cell.not($thisCell).hasClass("is-inactive")) {
@@ -32,7 +32,11 @@ $cell.find(".js-expander").click(function () {
     if ($(window).width() <= deviceWidthThreshold) {
       document.getElementsByClassName(
         "grid-container"
-      )[0].style.gridTemplateColumns = gridStatusStock;
+      )[0].style.gridTemplateColumns = "50% 50%";
+    } else {
+      document.getElementsByClassName(
+        "grid-container"
+      )[0].style.gridTemplateColumns = "auto auto auto";
     }
   }
 });
@@ -43,9 +47,13 @@ $cell.find(".js-collapser").click(function () {
 
   $thisCell.removeClass("is-expanded").addClass("is-collapsed");
   $cell.not($thisCell).removeClass("is-inactive");
-  if ($(window).width() <= "480") {
+  if ($(window).width() <= deviceWidthThreshold) {
     document.getElementsByClassName(
       "grid-container"
-    )[0].style.gridTemplateColumns = gridStatusStock;
+    )[0].style.gridTemplateColumns = "50% 50%";
+  } else {
+    document.getElementsByClassName(
+      "grid-container"
+    )[0].style.gridTemplateColumns = "auto auto auto";
   }
 });
