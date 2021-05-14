@@ -298,6 +298,11 @@ h4 {
 .pure-table-horizontal {
   border: none;
 }
+
+.contact-list.provision li {
+  display: inline-block;
+}
+
 @media screen and (max-width: 480px) {
   ul.menu li {
     display: block;
