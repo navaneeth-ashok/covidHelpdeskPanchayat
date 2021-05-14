@@ -38,6 +38,7 @@ a {
 
 h2 {
   font-size: 1.31em;
+  color: #2f5bac;
 }
 
 .page-container {
@@ -80,7 +81,7 @@ h2 {
 }
 
 #site-name a {
-  color: #000000;
+  color: #0502b2;
   font-size: 1em;
 }
 
