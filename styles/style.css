@@ -353,11 +353,11 @@ h4 {
   }
 
   .grid-container {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 48% 48%;
   }
 
   .grid-container-2 {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 48% 48%;
   }
 
   .menu-btn {

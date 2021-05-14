@@ -30,7 +30,7 @@ $cell.find(".js-expander").click(function () {
       //   document.getElementsByClassName(
       //     "grid-container"
       //   )[0].style.gridTemplateColumns = "50% 50%";
-      $(this).parent().parent().css("grid-template-columns", "50% 50%");
+      $(this).parent().parent().css("grid-template-columns", "48% 48%");
       //   console.log($(this).parent().parent().css("grid-template-columns"));
     } else {
       //   document.getElementsByClassName(
@@ -52,7 +52,7 @@ $cell.find(".js-collapser").click(function () {
     //   "grid-container"
     // )[0].style.gridTemplateColumns = "50% 50%";
 
-    $(this).parent().parent().parent().css("grid-template-columns", "50% 50%");
+    $(this).parent().parent().parent().css("grid-template-columns", "48% 48%");
     console.log($(this).parent().parent().parent());
   } else {
     // document.getElementsByClassName(
