@@ -62,3 +62,10 @@ $cell.find(".js-collapser").click(function () {
       .css("grid-template-columns", "auto auto auto");
   }
 });
+
+$(function () {
+  $("#wardselector").change(function () {
+    $(".ward").hide();
+    $("#" + $(this).val()).show();
+  });
+});
