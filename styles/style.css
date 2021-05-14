@@ -92,13 +92,19 @@ ul.menu {
 }
 
 .menu {
-  width: 64%;
   list-style: none;
   padding: 38px 0px 20px 0px;
   margin: 0;
   display: block;
   font-size: 1.25em;
   text-align: center;
+}
+
+.menu-fixed {
+  top: 0;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
 }
 
 .langTog {
@@ -352,5 +358,27 @@ h4 {
 
   .grid-container-2 {
     grid-template-columns: 50% 50%;
+  }
+
+  .menu-btn {
+    display: inline-block;
+    background: url(../images/menu_white_48dp.svg);
+    width: 48px;
+    height: 48px;
+    transition: all 0.4s linear;
+    filter: invert(68%) sepia(0%) saturate(1139%) hue-rotate(186deg)
+      brightness(82%) contrast(69%);
+    float: right;
+  }
+
+  .menu-btn-open {
+    background: url(../images/menu_open_white_48dp.svg);
+    filter: invert(68%) sepia(0%) saturate(1139%) hue-rotate(186deg)
+      brightness(82%) contrast(69%);
+  }
+
+  .menu {
+    display: block;
+    transition: all 0.1s linear;
   }
 }
