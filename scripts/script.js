@@ -2,6 +2,10 @@ var $cell = $(".card");
 
 var deviceWidthThreshold = 480;
 
+window.onload = function () {
+  $("#menu-btn-id").hide();
+};
+
 //open and close card when clicked on card
 $cell.find(".js-expander").click(function () {
   var $thisCell = $(this).closest(".card");
