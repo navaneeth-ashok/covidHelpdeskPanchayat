@@ -81,16 +81,26 @@ $(window).bind("scroll", function () {
   if ($(window).scrollTop() > navpos.top) {
     $("#header").addClass("menu-fixed");
     $("#site-name").hide();
+    $("body").css("padding-top", 300);
     if ($(window).width() <= deviceWidthThreshold) {
       $(".menu").hide();
       $(".menu-btn").show();
+      $(".container").addClass("container_adjust");
+      $("#dark_info").addClass("dark_info_hide");
+    } else {
+      $(".container").hide();
     }
   } else {
     $("#header").removeClass("menu-fixed");
     $("#site-name").show();
+    $("body").css("padding-top", 0);
     if ($(window).width() <= deviceWidthThreshold) {
       $(".menu").show();
       $(".menu-btn").hide();
+      $(".container").removeClass("container_adjust");
+      $("#dark_info").removeClass("dark_info_hide");
+    } else {
+      $(".container").show();
     }
   }
 });
@@ -112,3 +122,32 @@ $(".nav-cls").click(function () {
     $("#menu-btn-id").toggleClass("menu-btn-open");
   }
 });
+
+// Select the button
+// const btn = document.querySelector(".btn-toggle");
+// Select the stylesheet <link>
+const theme = document.querySelector("#theme-link");
+
+// Listen for a click on the button
+// btn.addEventListener("click", function () {
+//   // If the current URL contains "ligh-theme.css"
+//   if (theme.getAttribute("href") == "style/style.css") {
+//     // ... then switch it to "dark-theme.css"
+//     theme.href = "style/dark_style.css";
+//     // Otherwise...
+//   } else {
+//     // ... switch it to "light-theme.css"
+//     theme.href = "style/style.css";
+//   }
+// });
+
+function toggleTheme() {
+  if (theme.getAttribute("href") == "styles/style.css") {
+    // ... then switch it to "dark-theme.css"
+    theme.href = "styles/dark_style.css";
+    // Otherwise...
+  } else {
+    // ... switch it to "light-theme.css"
+    theme.href = "styles/style.css";
+  }
+}
