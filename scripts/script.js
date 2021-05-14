@@ -4,6 +4,7 @@ var deviceWidthThreshold = 480;
 
 window.onload = function () {
   $("#menu-btn-id").hide();
+  $("#1").show();
 };
 
 //open and close card when clicked on card
