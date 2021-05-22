@@ -1,5 +1,5 @@
 console.log("Inside Service Worker");
-const staticCacheName = "site-static-v1";
+const staticCacheName = "site-static-v2";
 const assets = [
   "/",
   "/index.html",
