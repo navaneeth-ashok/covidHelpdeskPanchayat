@@ -239,6 +239,10 @@ ul.menu.lang {
   opacity: 0;
 }
 
+.fa.fa-close {
+  filter: invert(14%) sepia(32%) saturate(0%) hue-rotate(233deg) brightness(91%)
+    contrast(88%);
+}
 /* .card.is-expanded .card__inner:after {
   content: "";
   opacity: 1;
