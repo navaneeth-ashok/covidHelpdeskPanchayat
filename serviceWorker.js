@@ -1,4 +1,3 @@
-console.log("Inside Service Worker");
 const staticCacheName = "site-static-v1.2";
 const assets = [
   "/",
@@ -14,6 +13,10 @@ const assets = [
   "/images/night.png",
   "/images/sunny.png",
   "/images/close_black_24dp.svg",
+  "/assets/icons/icon-72x72.png",
+  "/assets/icons/icon-96x96.png",
+  "/assets/icons/icon-144x144.png",
+  "/assets/icons/icon-192x192.png",
 ];
 // install event
 self.addEventListener("install", (evt) => {
