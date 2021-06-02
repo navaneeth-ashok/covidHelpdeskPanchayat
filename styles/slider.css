@@ -125,6 +125,10 @@ input:checked + .slider:before {
     contrast(88%); */
 }
 
+#toggle_label{
+  font-size: 0.1px;
+}
+
 @media screen and (max-width: 480px) {
   .container {
     display: flex;
