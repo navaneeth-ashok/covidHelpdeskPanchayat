@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manjari&family=Rubik&display=swap");
 
 /* General */
 html {
@@ -17,11 +17,11 @@ body {
 }
 
 span:lang(ml) {
-  font-family: "Baloo Chettan 2", sans-serif;
+  font-family: "Manjari", sans-serif;
 }
 
 div:lang(ml) {
-  font-family: "Baloo Chettan 2", sans-serif;
+  font-family: "Manjari", sans-serif;
 }
 
 h1,
